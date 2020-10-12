@@ -1,0 +1,109 @@
+:root{
+    --primary-color: #ee4d2d;
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --border-color: #dbdbdb;
+}
+
+/* apply tất cả các thuộc tính css lên tất cả các phần từ html khi nhúng file base.css vào */
+* {
+    box-sizing: inherit;
+}
+
+html{
+    /* HACK - 1rem = 10px */
+    font-size: 62.5%;
+    line-height: 1.6rem; /*16px*/
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Start reponsive */
+.grid{
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto; /* tự động canh giữa khối này khi nằm trong 1 khối khác*/
+}
+
+/* dùng class này khi ko mún sử dụng clas '.grid' trên */
+.grid__full-width{
+    width: 100%;
+}
+/*  */
+.grid__row{
+    display: flex; /* tất cả các flex item nằm ngang */
+    flex-wrap: wrap; /* cho phép các flex item xuốn dòng */
+}
+/* End reponsive */
+
+/* Animation */
+@keyframes fadeIn{
+    from{
+        opacity: 0; /* độ trong suốt */
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/* Modal */
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    animation: fadeIn linear 0.1s;
+}
+
+.modal__overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.modal__body{
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Button style */
+.btn{
+    min-width: 142px;
+    height: 34px;
+    text-decoration: none;
+    border: none;
+    border-radius: 3px;
+    font-size: 1.5rem;
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.6rem;
+}
+
+.btn.btn--normal:hover{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.btn.btn--primary{
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+.btn.btn--disabled{
+    color: #949494;
+    background-color: #c3c3c3;
+    cursor: default;
+}
+
+.btn.btn--size-s{
+    height: 32px;
+    font-size: 12px;
+   
+}
