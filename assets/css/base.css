@@ -4,6 +4,10 @@
     --black-color: #000;
     --text-color: #333;
     --border-color: #dbdbdb;
+
+    --header-height: 120px;
+    --navbar-height: 34px;
+    --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
 }
 
 /* apply tất cả các thuộc tính css lên tất cả các phần từ html khi nhúng file base.css vào */
@@ -47,6 +51,15 @@ html{
     }
 }
 
+@keyframes growth{
+    from{
+        transform: scale(var(--growth-from));
+    }
+    to{
+        transform: scale(var((--growth-to)));
+    }
+}
+
 /* Modal */
 .modal{
     position: fixed;
@@ -65,9 +78,12 @@ html{
     background-color: rgba(0, 0, 0, 0.4);
 }
 .modal__body{
+    --growth-from: 0.7;
+    --growth-to: 1;
     margin: auto;
     position: relative;
     z-index: 1;
+    animation: growth linear 0.1s;
 }
 
 /* Button style */
