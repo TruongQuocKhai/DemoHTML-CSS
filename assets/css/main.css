@@ -421,16 +421,16 @@
 
 .header__cart-list{
     position: absolute;
-    top:100%;
+    top:calc(100% + 10px);
     right: -6px;
     background-color: var(--white-color);
     width: 400px;
     border-radius: 2px;
     box-shadow: 0 1px 3.125rem 0 rgba(0,0,0,.2);
-    display: none;
     transform-origin: calc(100% - 20px) top;
     animation: headerNotifyGrowth ease-in 0.25s;
     cursor: default;
+    display: none;
 }
 .header__cart-wrap{
     position: relative;
@@ -477,6 +477,101 @@
     font-size: 1.4rem;
     line-height: 1.4rem; 
 }
+
+/* when the cart have items */
+.header__cart-heading{
+    text-align: left;
+    margin: 8px 0 8px 12px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #999;
+}
+
+.header__cart-list-item{
+    list-style: none;
+    padding-left: 0;
+}
+.header__cart-item{
+    display: flex;
+    align-items: center;
+} 
+
+.header__cart-item:hover{
+    background-color: #f8f8f8;
+}
+.header__cart-img{
+    width: 40px;
+    height: 40px;
+    margin: 12px;
+    border: 1px solid var(--border-color);
+} 
+
+.header__cart-item-info{
+    width: 100%;
+    margin-right: 12px;
+
+}
+.header__cart-item-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__cart-item-name{
+    color: var(--text-color);
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin: 0;
+
+}
+.header__cart-item-price{
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+.header__cart-item-multiply{
+    font-size: 0.9rem;
+    color: #757575;
+    margin: 0 4px;
+}
+.header__cart-item-quantity{
+    font-size: 1.2rem;
+    color: #757575;
+}
+.header__cart-item-body{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.header__cart-item-description{
+    font-size: 1.2rem;
+    color: #757575;
+    font-weight: 300;
+}
+.header__cart-item-remove{
+    font-size: 1.4rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.header__cart-item-remove:hover{
+    color: var(--primary-color);
+}
+
+.header__cart-view-cart{
+    float: right;
+    margin: 0 12px 12px 0;
+}
+
+.header__cart-view-cart:hover{
+    background-color: #f56f54;
+}
+
+
+
+
+
+
+
 
 /* tag input search */
 .header__search-input-wrap{
