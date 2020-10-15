@@ -34,11 +34,31 @@ html{
 .grid__full-width{
     width: 100%;
 }
-/*  */
+
 .grid__row{
     display: flex; /* tất cả các flex item nằm ngang */
     flex-wrap: wrap; /* cho phép các flex item xuốn dòng */
+    margin-left: -12px;
+    margin-right: -12px;
 }
+
+.grid__column-2{
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 16.6667%;
+}
+
+.grid__column-10{
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 83.3334%;
+}
+
+
+
+
+
+
 /* End reponsive */
 
 /* Animation */
