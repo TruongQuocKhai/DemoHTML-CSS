@@ -56,9 +56,6 @@ html{
 
 
 
-
-
-
 /* End reponsive */
 
 /* Animation */
@@ -117,10 +114,11 @@ html{
     padding: 0;
     outline: none;
     cursor: pointer;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     line-height: 1.6rem;
+    background-color: var(--white-color);
 }
 
 .btn.btn--normal:hover{
@@ -142,4 +140,63 @@ html{
     height: 32px;
     font-size: 12px;
    
+}
+
+/* selection */
+.select-input{
+    position: relative;
+    min-width: 200px;
+    height: 34px;
+    padding: 0 12px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.select-input:hover .select-input__list{
+    display: block;
+}
+
+.select-input-icon{
+    font-size: 1.4rem;
+    color: #747474;
+    position: relative;
+    top: 1px;
+}
+
+.select-input__list{
+    position: absolute;
+    top: calc(100% - 8px);
+    left: 0;
+    right: 0;
+    padding: 12px 12px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    list-style: none;
+    display: none;
+}
+
+.select-input__list::before{
+    content: "";
+    display: block;
+    width: 100%;
+    top: 100%;
+    border-width: 50px;
+    background-color: red;
+}
+
+.select-input__link{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.4rem;
+    display: block;
+    padding: 8px 0;
+
+}
+
+.select-input__link:hover{
+    color: var(--primary-color);
 }
